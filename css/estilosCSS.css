@@ -1,0 +1,510 @@
+
+
+
+/*=================================================================*/
+/* General*/
+/*=================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+}
+
+
+
+/*=================================================================*/
+/*Titulos menu*/
+/*=================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+
+
+
+/*=================================================================*/
+/* NAV barra de navegacion*/
+/*=================================================================*/
+
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    background-color: #162a10c0;
+    transition: padding 0.3s ease, height 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-container.scrolled{
+    padding: 5px 15px;
+}
+
+.nav-logo{
+    width: 50px;
+    height: 50px;    
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.nav-title{
+    color:#c0ac6c;
+    font-size: 17px;
+    text-align: center;
+    grid-column: 3;
+    justify-self: end;
+    transition: color 0.6s ease;
+    margin-right: auto;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    gap: 25px;
+    margin-left: auto;
+    grid-column: 2;
+    justify-items: center;
+}
+
+.nav-items{
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-items a{
+    display: inline-block;
+    text-decoration: none;
+    color: #c0ac6c;
+    align-items: right;
+    transition: color 0.6s ease;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(192, 172, 108, 0.8);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #c0ac6c;
+    border-radius: 2px;
+}
+/*
+.nav-items:hover{
+    background-color: #bd9e60;
+}
+*/
+.item-title{
+    font-size: 25px;
+    color:#c0ac6c;
+}
+
+.nav-items a:hover{
+    color: #fff200;
+}
+
+.nav-title:hover{
+    color:#fff200;
+    
+}
+
+.nav-logo:hover{
+    width: 100px;
+    height: 100px; 
+    transform: scale(1.1)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================*/
+/*Main sobre nosotros*/
+/*=================================================================*/
+
+
+
+.main-presentacion{
+    position: relative;
+    background-image: url('../resources/main/main-cafe.jpg');
+    background-size: cover;
+    background-position:center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.main-presentacion::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.416);
+}
+
+.main-texto{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*todo esto posicina el texto al centro*/
+    color:#c0ac6c;
+    background-color:transparent;
+    transition: 0.6s ease;
+    text-align: center;
+}
+/*
+.main-texto:hover{
+    color:#fff200;
+}
+*/
+
+.main-textoh2{
+    align-items: center;
+    text-align: center;
+}
+
+
+/*=================================================================*/
+/*MENU*/
+/*=================================================================*/
+
+
+.menu{
+    background-color: #f5f1e8;
+    background-image: url('../resources/menu/menu-fondo3.jpg');
+    position: relative;
+    background-position:auto;
+    background-size: cover;
+    opacity: 200%;
+}
+
+.menuTitle{
+    font-size:50px;
+    text-align: center;
+    color:#faf8f3;
+    transition: opacity 1s ease, transform 1s ease;
+    /*Borde de titulos*/
+    
+}
+
+.menuTitleCategoria{
+    font-size: 40px;
+    text-align: center;
+    color:#faf8f3;
+     
+}
+
+.menuTitle.visible{
+    opacity:1;
+    transform:scale(1);
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    
+}
+
+.menu-bebidas-cat1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 40px;
+    
+}
+
+
+.menu-bebidas-cat2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 40px;
+    
+}
+
+
+.menu-bebidas-cat3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 40px;
+    
+}
+
+.menu-item {
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.721);
+    border-bottom: 1px solid #c0ac6c;
+    border-top: 1px solid #c0ac6c;
+    opacity:0;
+    transform:scale(0.7);
+    transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    flex-direction: column;
+
+}
+/*
+.menu-item:hover{
+    width: 256px;
+}
+    */
+
+.menu-item.visible{
+    opacity:1;
+    transform: scale(1);
+}
+
+.menu-item img {
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item img:hover{
+    transform:scale(1.05)
+}
+
+.menu-desc{
+    color:white;
+    font-size: 15px;
+}
+.item-title{
+    color:#c0ac6c;
+    font-size: 20px;
+}
+
+.item-precio{
+    text-align:center;
+    color:#c0ac6c;
+    margin-top: auto;
+}
+
+.item-precio span:hover{
+    color:#fff200;
+}
+
+/*=================================================================*/
+/*UBICACION*/
+/*=================================================================*/
+
+.ubication {
+    background-image: url('../resources/ubicacion-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px 100px;
+}
+
+.ubication-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ubicacion-mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ubicacion-mapa iframe {
+    width: min(100%, 900px);
+    height: 450px;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/*=================================================================*/
+/*Main sobre nosotros*/
+/*=================================================================*/
+
+
+.footer{
+    background-color:#0f2a07;
+    padding:20px;
+}
+.info-footer{
+    color:#c0ac6c;
+    font-size: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: column;
+    justify-content: center;
+
+}
+
+.contacto{
+    color:#c0ac6c;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.whatsapp-icon {
+    font-size: 24px;
+    color: #25D366;
+    text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+    color: #1ebc59;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-title {
+        font-size: 1rem;
+        margin-right: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 10px;
+        margin-left: 0;
+        background-color: rgba(22, 42, 16, 0.92);
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-items a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .main-presentacion {
+        height: 70vh;
+        min-height: 420px;
+    }
+
+    .main-texto {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .main-textoh2 {
+        font-size: 2rem;
+    }
+
+    .main-texto h3 {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .menuTitle {
+        font-size: 2.25rem;
+    }
+
+    .menuTitleCategoria {
+        font-size: 1.75rem;
+    }
+
+    .menu-item {
+        width: min(100%, 240px);
+    }
+
+    .menu-item img {
+        width: 100%;
+        max-width: 220px;
+        height: 180px;
+    }
+
+    .menu-container,
+    .menu-bebidas-cat1,
+    .menu-bebidas-cat2,
+    .menu-bebidas-cat3 {
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .ubication {
+        padding: 60px 15px;
+    }
+
+    .ubicacion-mapa iframe {
+        height: 300px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-footer,
+    .contacto {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto {
+        width: 100%;
+    }
+}

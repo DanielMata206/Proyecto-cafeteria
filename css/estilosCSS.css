@@ -404,6 +404,12 @@
     color: #1ebc59;
 }
 
+
+
+
+
+
+
 @media (max-width: 768px) {
     .nav-container {
         flex-wrap: wrap;
@@ -448,7 +454,7 @@
     }
 
     .main-presentacion {
-        height: 70vh;
+        height: 100vh;
         min-height: 420px;
     }
 

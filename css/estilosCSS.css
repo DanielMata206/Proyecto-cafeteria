@@ -1,6 +1,5 @@
 
 
-
 /*=================================================================*/
 /* General*/
 /*=================================================================*/
@@ -389,41 +388,92 @@ html {
 
 
 /*=================================================================*/
-/*Main sobre nosotros*/
+/*FOOTER*/
 /*=================================================================*/
 
 
 .footer{
-    background-color:#0f2a07;
-    padding:20px;
-}
-.info-footer{
-    color:#c0ac6c;
-    font-size: 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: column;
-    justify-content: center;
-
+    background-color: #0f2a07;
+    border-top: 2px solid #c0ac6c;
+    padding: 50px 20px 0;
+    color: #c0ac6c;
 }
 
-.contacto{
-    color:#c0ac6c;
-    font-size: 10px;
+.footer-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr;
+    gap: 40px;
+}
+
+.footer-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.footer-brand h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e6dcb4;
+}
+
+.footer-col h3{
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(192, 172, 108, 0.4);
+    display: inline-block;
+}
+
+.footer-col ul{
+    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    
+    gap: 12px;
 }
 
-.whatsapp-icon {
-    font-size: 24px;
-    color: #25D366;
+.footer-col li,
+.footer-col a,
+.footer-col span{
+    font-size: 14px;
+    color: #e6dcb4;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
 }
 
-.whatsapp-icon:hover {
-    color: #1ebc59;
+.footer-col a:hover{
+    color: #fff200;
+}
+
+.footer-col i{
+    width: 18px;
+    text-align: center;
+    color: #c0ac6c;
+}
+
+.footer-whatsapp i{
+    color: #25D366;
+}
+
+.footer-bottom{
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 18px 0;
+    border-top: 1px solid rgba(192, 172, 108, 0.3);
+    text-align: center;
+    font-size: 12px;
+    color: #c0ac6c;
 }
 
 
@@ -528,21 +578,25 @@ html {
         height: 300px;
     }
 
-    .footer {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
-    .info-footer,
-    .contacto {
-        justify-content: center;
+    .footer-col ul {
         align-items: center;
-        text-align: center;
     }
 
-    .contacto {
-        width: 100%;
+    .footer-col li,
+    .footer-col a,
+    .footer-col span {
+        justify-content: center;
     }
 }
